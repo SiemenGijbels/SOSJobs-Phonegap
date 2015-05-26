@@ -2,9 +2,6 @@ $(function () {
 
 	var prevScroll = 0;
 
-
-	localStorage.setItem("id", 11);
-
 	function init () {
 
 		console.log("init");
@@ -35,6 +32,17 @@ $(function () {
 
 		});
 
+		$(".achievement_container .close").on("click",function  (e) {
+			e.preventDefault();
+			console.log("close");
+
+			if($(".achievement_container").hasClass("open")){
+				$(".achievement_container").removeClass("open");
+			}else{
+				$(".achievement_container").addClass("open");
+			}
+		});
+
 
 		$(document).on("scrollstop",function(){
 
@@ -46,6 +54,9 @@ $(function () {
 		});
 
 	}	
+	function toggleAchievements () {
+		// body...
+	}
 
 	init();
 });

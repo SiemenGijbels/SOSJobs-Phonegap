@@ -67,7 +67,7 @@ $(function () {
 
                         $.ajax(
                         {
-                            url : "http://localhost:8888/sosjobs/api/insertAchievement/",
+                            url : "http://rachouanrejeb.be/sosjobs/api/insertAchievement/",
                             type: "POST",
                             data : sendInfo,
                             success:function(data, textStatus, jqXHR) 

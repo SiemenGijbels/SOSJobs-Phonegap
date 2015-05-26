@@ -1,0 +1,41 @@
+a{
+    text-decoration: none;
+    color: inherit;
+}
+header#top h1 {
+    text-align: center;
+    padding: 40px 40px 10px 40px;
+    color: #3e464c;
+    font-size: 25px;
+}
+
+#select_function{
+    float: left;
+    width: 90%;
+    margin:20% 5% 80px;
+    text-align: center;
+}
+
+#select_function .select_button_left {
+    display: block;
+    float:left;
+    width:30%;
+    padding: 5%;
+    background-color:#f37c69;
+    border-radius:10px;
+    border:2px solid #3e464c;
+    color: #fff9eb;   
+}
+
+#select_function .select_button_right {
+    display: block;
+    float:right;
+    width:30%;
+    padding: 5%;
+    background-color:#f37c69;
+    color: #fff9eb;
+    border-radius:10px;
+    border:2px solid #3e464c;
+}
+
+

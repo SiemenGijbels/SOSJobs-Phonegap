@@ -2,6 +2,7 @@
 <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 595.3 595.3" enable-background="new 0 0 595.3 595.3" xml:space="preserve">
+<rect fill="#FFF8E9" width="595.3" height="595.3"/>
 <circle fill="none" cx="297.6" cy="297.6" r="144"/>
 <path fill="#3F464C" d="M297.6,449.1c-83.5,0-151.4-67.9-151.4-151.4s67.9-151.4,151.4-151.4S449,214.2,449,297.7
 	C449.1,381.1,381.1,449.1,297.6,449.1z M297.6,161.1c-75.3,0-136.5,61.3-136.5,136.5c0,75.3,61.3,136.5,136.5,136.5
@@ -11,5 +12,5 @@
 	C368.1,336.5,336.5,368.1,297.6,368.1z M297.6,245.1c-29,0-52.6,23.6-52.6,52.6s23.6,52.6,52.6,52.6c29,0,52.6-23.6,52.6-52.6
 	C350.2,268.6,326.6,245.1,297.6,245.1z"/>
 <circle fill="#3F464C" cx="297.6" cy="297.6" r="19.6"/>
-<circle fill="#FFFFFF" stroke="#3F464C" stroke-miterlimit="10" cx="314.1" cy="281.6" r="14.7"/>
+<circle fill="#FFF8E9" stroke="#3F464C" stroke-miterlimit="10" cx="314.1" cy="281.6" r="14.7"/>
 </svg>

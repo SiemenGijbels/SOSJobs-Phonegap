@@ -1,8 +1,14 @@
-header#top h1 {
+header h1 {
     text-align: center;
     padding: 40px 40px 10px 40px;
     color: #3e464c;
     font-size: 25px;
+}
+
+header h2 {
+    text-align: center;
+    color: #3e464c;
+    font-size: 20px;
 }
 
 input:focus{

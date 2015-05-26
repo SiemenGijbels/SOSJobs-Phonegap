@@ -9,41 +9,49 @@ $(function  () {
 		  context: document.body
 		}).done(function(data) {
 
-			console.log("done");
-			console.log(data);
+		console.log("done");
+		console.log(data);
 
-			$(data).each(function  (key,val) {
+		$(data).each(function (key,val) {
 
-				var htmlString = "";
+			var htmlString = "";
 
-				htmlString += '<header class="color'+val.color_code+'"><a href="" class="info" id="'+val.id+'">';
-				htmlString += '<img src="https://d13yacurqjgara.cloudfront.net/users/180760/avatars/normal/TEC---Dribble-Avatar-Red-01.png">';
-				htmlString += '<div><h1>'+val.title+'</h1><h2>'+val.location+'</h2></div><span class="detail"></span>';
-				htmlString += '</a></header>';
-				htmlString += '<aside><header class="hide"><h1>vacancie options</h1></header>';
-				htmlString += '<nav><header class="hide"><h1>vacancie navigation</h1></header>';
-				htmlString += '<ul><li class="fav" id="'+val.id+'"><span class="hide">favorite</span></li><li class="share"><span class="hide">>share</span></li><li><span>APPLY</span></li><li class="delete"><span class="hide">>delete</span></li></ul>';
-				htmlString += ' </nav> </aside>';
+			htmlString += '<header class="color'+val.color_code+'"><a href="" class="info" id="'+val.id+'">';
+			htmlString += '<img src="https://d13yacurqjgara.cloudfront.net/users/180760/avatars/normal/TEC---Dribble-Avatar-Red-01.png">';
+			htmlString += '<div><h1>'+val.title+'</h1><h2>'+val.location+'</h2></div><span class="detail"></span>';
+			htmlString += '</a></header>';
+			htmlString += '<aside><header class="hide"><h1>vacancie options</h1></header>';
+			htmlString += '<nav><header class="hide"><h1>vacancie navigation</h1></header>';
+			htmlString += '<ul><li class="fav" id="'+val.id+'"><span class="hide">favorite</span></li><li class="share"><span class="hide">>share</span></li><li><span>APPLY</span></li><li class="delete"><span class="hide">>delete</span></li></ul>';
+			htmlString += ' </nav> </aside>';
 
-				var newSection = $('<section/>').html(htmlString);
+			var newSection = $('<section/>').html(htmlString);
 
-				$("article.feed").append(newSection);
-			});
+			$("article.feed").append(newSection);
+		});
 
 			$("article section .info").on("click",function (e) {
 
 				e.preventDefault();
 
-				var student_id = parseInt(localStorage.getItem("id"));
+				
+				var loggedIn = localStorage.getItem("loggedIn");
+				var user = JSON.parse(localStorage.getItem("user"));
+				var student_id = parseInt(user.id);
 
-				var sendInfo = {
+
+				console.log(user);
+
+				if(loggedIn){
+
+					var sendInfo = {
                    achievement_id: 2,
                    student_id: student_id
                };
 
                 $.ajax(
                 {
-                    url : "http://localhost:8888/sosjobs/api/getAchievement/",
+                    url : "http://rachouanrejeb.be/sosjobs/api/getAchievement/",
                     type: "POST",
                     data : sendInfo,
                     success:function(data, textStatus, jqXHR) 
@@ -58,7 +66,6 @@ $(function  () {
             				min++;
 
             				console.log("update achievement");
-            				var student_id = parseInt(localStorage.getItem("id"));
 
             				var sendInfo = {
 			                   achievement_id: data.achievement_id,
@@ -68,7 +75,7 @@ $(function  () {
 
 	        				$.ajax(
 			                {
-			                    url : "http://localhost:8888/sosjobs/api/updateAchievement/",
+			                    url : "http://rachouanrejeb.be/sosjobs/api/updateAchievement/",
 			                    type: "POST",
 			                    data : sendInfo,
 			                    success:function(data, textStatus, jqXHR) 
@@ -76,7 +83,6 @@ $(function  () {
 
 			            			console.log(data);
 
-	                                var student_id = parseInt(localStorage.getItem("id"));
 	                                var id = parseInt(data.student_id);
 
 	                                console.log(id,student_id);
@@ -90,13 +96,17 @@ $(function  () {
 
 			        				$.ajax(
 					                {
-					                    url : "http://localhost:8888/sosjobs/api/unlockAchievement/",
+					                    url : "http://rachouanrejeb.be/sosjobs/api/unlockAchievement/",
 					                    type: "POST",
 					                    data : sendInfo,
 					                    success:function(data, textStatus, jqXHR) 
 					                    {
-
 					            			console.log(data);
+					            			$(".achievement_container section img").attr("src","pics/achievements/"+data.name+"-unlocked.svg");
+					            			$(".achievement_container section h1").text(data.name);
+					            			$(".achievement_container section p").text(data.description);
+
+					            			$(".achievement_container").addClass("open");
 					                    },
 					                    error: function(jqXHR, textStatus, errorThrown) 
 					                    {
@@ -120,12 +130,18 @@ $(function  () {
                     }
                 });
 
+				}else{
+					window.location.replace("login.html");
+				}
+				
+
 
 				console.log("clicked");
 
 				var currentId = $(this).attr("id");
+				var color = $(this).parent().attr("class");
 				
-				showDetail(currentId);
+				showDetail(currentId,color);
 				
 			});
 
@@ -160,20 +176,17 @@ $(function  () {
 
 			});
 
-			/*$(".detail header .job").text(data.title);
-			$(".detail header .jobinfo .locatie").text(data.location);
-			$(".detail header .jobinfo .soort").text(data.category);
-			$(".detail aside .info").text(data.description);*/
-
 
 		});
 	}
 
 	init();
 
-	function showDetail (id) {
+	function showDetail (id,color) {
 
-		console.log(id);
+		console.log(id,color);
+
+		$(".detail header").attr("class",color);
 		var url = "http://rachouanrejeb.be/sosjobs/api/vacancies/"+id;
 
 		$.ajax({
