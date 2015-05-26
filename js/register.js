@@ -32,6 +32,11 @@ $(function () {
             $("#picture").val($(this).val()+".jpg");
         });
 
+        $.each(achievements,function  () {
+
+                        console.log("achievement");
+                    });
+
         $("#register_student").submit(function(e) {
 
             e.preventDefault();
@@ -47,6 +52,36 @@ $(function () {
                 success:function(data, textStatus, jqXHR) 
                 {
                     console.log(data);
+
+                    var id = 1;
+
+                    $.each(achievements,function (key,val) {
+
+                        var sendInfo = {
+                           achievement_id: key,
+                           student_id: data.id,
+                           max: val
+                       };
+
+                       id++;
+
+                        $.ajax(
+                        {
+                            url : "http://localhost:8888/sosjobs/api/insertAchievement/",
+                            type: "POST",
+                            data : sendInfo,
+                            success:function(data, textStatus, jqXHR) 
+                            {
+                                console.log(data);
+                            },
+                            error: function(jqXHR, textStatus, errorThrown) 
+                            {
+                                console.log(textStatus);  
+                            }
+                        });
+
+                    });
+                    
                 },
                 error: function(jqXHR, textStatus, errorThrown) 
                 {
@@ -81,7 +116,6 @@ $(function () {
 
       function error() {
         alert("We couldn't find you");
-        toggleSearch(true);
       };
 
       navigator.geolocation.getCurrentPosition(success, error);

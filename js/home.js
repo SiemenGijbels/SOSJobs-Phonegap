@@ -3,6 +3,7 @@ $(function  () {
 	function init () {
 
 
+
 		$.ajax({
 		  url: "http://rachouanrejeb.be/sosjobs/api/vacancies/",
 		  context: document.body
@@ -32,6 +33,93 @@ $(function  () {
 			$("article section .info").on("click",function (e) {
 
 				e.preventDefault();
+
+				var student_id = parseInt(localStorage.getItem("id"));
+
+				var sendInfo = {
+                   achievement_id: 2,
+                   student_id: student_id
+               };
+
+                $.ajax(
+                {
+                    url : "http://localhost:8888/sosjobs/api/getAchievement/",
+                    type: "POST",
+                    data : sendInfo,
+                    success:function(data, textStatus, jqXHR) 
+                    {
+            			var min = parseInt(data.min);
+            			var max = parseInt(data.max);
+
+            			console.log(data.min,data.max);
+
+            			if( min < max){
+
+            				min++;
+
+            				console.log("update achievement");
+            				var student_id = parseInt(localStorage.getItem("id"));
+
+            				var sendInfo = {
+			                   achievement_id: data.achievement_id,
+			                   student_id: student_id,
+			                   min:min
+			               };
+
+	        				$.ajax(
+			                {
+			                    url : "http://localhost:8888/sosjobs/api/updateAchievement/",
+			                    type: "POST",
+			                    data : sendInfo,
+			                    success:function(data, textStatus, jqXHR) 
+			                    {
+
+			            			console.log(data);
+
+	                                var student_id = parseInt(localStorage.getItem("id"));
+	                                var id = parseInt(data.student_id);
+
+	                                console.log(id,student_id);
+
+	                                if(id == student_id){
+	                                	var sendInfo = {
+						                   achievement_id: data.achievement_id,
+						                   student_id: student_id,
+						                   unlock:1
+						               };
+
+			        				$.ajax(
+					                {
+					                    url : "http://localhost:8888/sosjobs/api/unlockAchievement/",
+					                    type: "POST",
+					                    data : sendInfo,
+					                    success:function(data, textStatus, jqXHR) 
+					                    {
+
+					            			console.log(data);
+					                    },
+					                    error: function(jqXHR, textStatus, errorThrown) 
+					                    {
+					                        console.log(textStatus);  
+					                    }
+					                });
+	                                }
+			                    },
+			                    error: function(jqXHR, textStatus, errorThrown) 
+			                    {
+			                        console.log(textStatus);  
+			                    }
+			                });
+
+            			}
+            			
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) 
+                    {
+                        console.log(textStatus);  
+                    }
+                });
+
 
 				console.log("clicked");
 
