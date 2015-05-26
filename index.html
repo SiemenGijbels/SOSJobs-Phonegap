@@ -1,0 +1,406 @@
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="theme-color" content="#F9EACD">
+        <title>SOSJobs - Home</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/index.css">
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript">$(document).bind("mobileinit", function(){$.extend(  $.mobile , {autoInitializePage: false})});</script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script language="JavaScript" type="text/javascript" src="js/app.js"></script>
+        <script language="JavaScript" type="text/javascript" src="js/home.js"></script>
+        <link rel="icon" 
+      type="image/png" 
+      href="pics/logo.png">
+        
+    </head>
+    <body>
+        
+        <header id="main_head">
+            
+            <nav class="main">
+
+                <ul>
+                    <li><a href=""><img src="pics/find.svg"></li>
+                    <li><a href=""><img src="pics/logo.svg"></a></li>
+                    <li><a href=""><img src="pics/compass.svg"></a>
+                        <ul class="dropdown">
+                            <li><a href="">Radius</a></li>
+                            <li><a href="">Categorie</a></li>
+                            <li><a href="">Bedrijf</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            
+
+            <nav class="tabs">
+                    <ul>
+                        <li><a href="" class="selected">POPULAR</a></li>
+                        <li><a href="">MOST VIEWED</a></li>
+                        <li><a href="">RECENT</a></li>
+                    </ul>
+            </nav>
+        </header>
+        
+        
+        
+        <article class="feed">
+
+            <form id="favourite_form" action="http://rachouanrejeb.be/sosjobs/api/insertFavourite" method="post">
+                <input type="number" class="hide" name="vacancy_id" id="vacancy_id" value="0"/>
+                <input type="number" class="hide" name="student_id" id="student_id" value="0"/>
+            </form>
+
+            <!--<section>
+
+                <header class="red">
+                    <a href="" class="info" id="1">
+                        <img src="https://d13yacurqjgara.cloudfront.net/users/180760/avatars/normal/TEC---Dribble-Avatar-Red-01.png">
+                        <div>
+                            <h1>INTERACTIVE DESIGNER</h1>
+                            <h2>London, UK</h2>
+                        </div>
+                        <span class="detail"></span>
+                    </a>
+                </header>
+
+                <aside>
+                    <header class="hide"><h1>vacancie options</h1></header>
+                    <nav>
+                        <header class="hide"><h1>vacancie navigation</h1></header>
+                        <ul>
+                            <li class="fav" id="1"><span class="hide">favorite</span></li>
+                            <li class="share"><span class="hide">>share</span></li>
+                            <li><span>APPLY</span></li>
+                            <li class="delete"><span class="hide">>delete</span></li>
+                        </ul>
+                    </nav>
+                    
+                </aside>
+                
+            </section>
+        
+            <section>
+
+                <header class="red">
+                    <a href="" class="info">
+                        <img src="https://d13yacurqjgara.cloudfront.net/users/761348/avatars/normal/879463c21f43696a38c83a2e29034b0e.png?1424166156">
+                        <div>
+                            <h1>INTERACTIVE DESIGNER</h1>
+                            <h2>London, UK</h2>
+                        </div>
+                        <span class="detail"></span>
+                    </a>
+                </header>
+
+                <aside>
+                    <header class="hide"><h1>vacancie options</h1></header>
+                    <nav>
+                        <header class="hide"><h1>vacancie navigation</h1></header>
+                        <ul>
+                            <li class="fav"><span class="hide">favorite</span></li>
+                            <li class="share"><span class="hide">>share</span></li>
+                            <li><span>APPLY</span></li>
+                            <li class="delete"><span class="hide">>delete</span></li>
+                        </ul>
+                    </nav>
+                    
+                </aside>
+                
+            </section>
+        
+            <section>
+
+                <header class="red">
+                    <a href="" class="info">
+                        <img src="https://d13yacurqjgara.cloudfront.net/users/761348/avatars/normal/879463c21f43696a38c83a2e29034b0e.png?1424166156">
+                        <div>
+                            <h1>INTERACTIVE DESIGNER</h1>
+                            <h2>London, UK</h2>
+                        </div>
+                        <span class="detail"></span>
+                    </a>
+                </header>
+
+                <aside>
+                    <header class="hide"><h1>vacancie options</h1></header>
+                    <nav>
+                        <header class="hide"><h1>vacancie navigation</h1></header>
+                        <ul>
+                            <li class="fav"><span class="hide">favorite</span></li>
+                            <li class="share"><span class="hide">>share</span></li>
+                            <li><span>APPLY</span></li>
+                            <li class="delete"><span class="hide">>delete</span></li>
+                        </ul>
+                    </nav>
+                    
+                </aside>
+                
+            </section>
+        
+
+            <section>
+
+                <header class="red">
+                    <a href="" class="info">
+                        <img src="https://d13yacurqjgara.cloudfront.net/users/761348/avatars/normal/879463c21f43696a38c83a2e29034b0e.png?1424166156">
+                        <div>
+                            <h1>INTERACTIVE DESIGNER</h1>
+                            <h2>London, UK</h2>
+                        </div>
+                        <span class="detail"></span>
+                    </a>
+                </header>
+
+                <aside>
+                    <header class="hide"><h1>vacancie options</h1></header>
+                    <nav>
+                        <header class="hide"><h1>vacancie navigation</h1></header>
+                        <ul>
+                            <li class="fav"><span class="hide">favorite</span></li>
+                            <li class="share"><span class="hide">>share</span></li>
+                            <li><span>APPLY</span></li>
+                            <li class="delete"><span class="hide">>delete</span></li>
+                        </ul>
+                    </nav>
+                    
+                </aside>
+                
+            </section>
+        
+
+            <section>
+
+                <header class="red">
+                    <a href="" class="info">
+                        <img src="https://d13yacurqjgara.cloudfront.net/users/761348/avatars/normal/879463c21f43696a38c83a2e29034b0e.png?1424166156">
+                        <div>
+                            <h1>INTERACTIVE DESIGNER</h1>
+                            <h2>London, UK</h2>
+                        </div>
+                        <span class="detail"></span>
+                    </a>
+                </header>
+
+                <aside>
+                    <header class="hide"><h1>vacancie options</h1></header>
+                    <nav>
+                        <header class="hide"><h1>vacancie navigation</h1></header>
+                        <ul>
+                            <li class="fav"><span class="hide">favorite</span></li>
+                            <li class="share"><span class="hide">>share</span></li>
+                            <li><span>APPLY</span></li>
+                            <li class="delete"><span class="hide">>delete</span></li>
+                        </ul>
+                    </nav>
+                    
+                </aside>
+                
+            </section>
+
+
+             <section>
+
+                <header class="red">
+                    <a href="" class="info">
+                        <img src="https://d13yacurqjgara.cloudfront.net/users/761348/avatars/normal/879463c21f43696a38c83a2e29034b0e.png?1424166156">
+                        <div>
+                            <h1>INTERACTIVE DESIGNER</h1>
+                            <h2>London, UK</h2>
+                        </div>
+                        <span class="detail"></span>
+                    </a>
+                </header>
+
+                <aside>
+                    <header class="hide"><h1>vacancie options</h1></header>
+                    <nav>
+                        <header class="hide"><h1>vacancie navigation</h1></header>
+                        <ul>
+                            <li class="fav"><span class="hide">favorite</span></li>
+                            <li class="share"><span class="hide">>share</span></li>
+                            <li><span>APPLY</span></li>
+                            <li class="delete"><span class="hide">>delete</span></li>
+                        </ul>
+                    </nav>
+                    
+                </aside>
+                
+            </section>
+        
+            <section>
+
+                <header class="red">
+                    <a href="" class="info">
+                        <img src="https://d13yacurqjgara.cloudfront.net/users/761348/avatars/normal/879463c21f43696a38c83a2e29034b0e.png?1424166156">
+                        <div>
+                            <h1>INTERACTIVE DESIGNER</h1>
+                            <h2>London, UK</h2>
+                        </div>
+                        <span class="detail"></span>
+                    </a>
+                </header>
+
+                <aside>
+                    <header class="hide"><h1>vacancie options</h1></header>
+                    <nav>
+                        <header class="hide"><h1>vacancie navigation</h1></header>
+                        <ul>
+                            <li class="fav"><span class="hide">favorite</span></li>
+                            <li class="share"><span class="hide">>share</span></li>
+                            <li><span>APPLY</span></li>
+                            <li class="delete"><span class="hide">>delete</span></li>
+                        </ul>
+                    </nav>
+                    
+                </aside>
+                
+            </section>
+        
+            <section>
+
+                <header class="red">
+                    <a href="" class="info">
+                        <img src="https://d13yacurqjgara.cloudfront.net/users/761348/avatars/normal/879463c21f43696a38c83a2e29034b0e.png?1424166156">
+                        <div>
+                            <h1>INTERACTIVE DESIGNER</h1>
+                            <h2>London, UK</h2>
+                        </div>
+                        <span class="detail"></span>
+                    </a>
+                </header>
+
+                <aside>
+                    <header class="hide"><h1>vacancie options</h1></header>
+                    <nav>
+                        <header class="hide"><h1>vacancie navigation</h1></header>
+                        <ul>
+                            <li class="fav"><span class="hide">favorite</span></li>
+                            <li class="share"><span class="hide">>share</span></li>
+                            <li><span>APPLY</span></li>
+                            <li class="delete"><span class="hide">>delete</span></li>
+                        </ul>
+                    </nav>
+                    
+                </aside>
+                
+            </section>
+        
+
+            <section>
+
+                <header class="red">
+                    <a href="" class="info">
+                        <img src="https://d13yacurqjgara.cloudfront.net/users/761348/avatars/normal/879463c21f43696a38c83a2e29034b0e.png?1424166156">
+                        <div>
+                            <h1>INTERACTIVE DESIGNER</h1>
+                            <h2>London, UK</h2>
+                        </div>
+                        <span class="detail"></span>
+                    </a>
+                </header>
+
+                <aside>
+                    <header class="hide"><h1>vacancie options</h1></header>
+                    <nav>
+                        <header class="hide"><h1>vacancie navigation</h1></header>
+                        <ul>
+                            <li class="fav"><span class="hide">favorite</span></li>
+                            <li class="share"><span class="hide">>share</span></li>
+                            <li><span>APPLY</span></li>
+                            <li class="delete"><span class="hide">>delete</span></li>
+                        </ul>
+                    </nav>
+                    
+                </aside>
+                
+            </section>
+        
+
+            <section>
+
+                <header class="red">
+                    <a href="" class="info">
+                        <img src="https://d13yacurqjgara.cloudfront.net/users/761348/avatars/normal/879463c21f43696a38c83a2e29034b0e.png?1424166156">
+                        <div>
+                            <h1>INTERACTIVE DESIGNER</h1>
+                            <h2>London, UK</h2>
+                        </div>
+                        <span class="detail"></span>
+                    </a>
+                </header>
+
+                <aside>
+                    <header class="hide"><h1>vacancie options</h1></header>
+                    <nav>
+                        <header class="hide"><h1>vacancie navigation</h1></header>
+                        <ul>
+                            <li class="fav"><span class="hide">favorite</span></li>
+                            <li class="share"><span class="hide">>share</span></li>
+                            <li><span>APPLY</span></li>
+                            <li class="delete"><span class="hide">>delete</span></li>
+                        </ul>
+                    </nav>
+                    
+                </aside>
+                
+            </section>-->
+        
+            
+        
+        </article>
+
+
+        <article class="detail close">
+            <header class="red">
+
+                <h1><span class="back"></span><span class="job">INTERACTIVE DESIGNER</span></h1>
+                <h2 class="bedrijf">PARLIAMENT</h2>
+            
+                <img src="https://d13yacurqjgara.cloudfront.net/users/761348/avatars/normal/879463c21f43696a38c83a2e29034b0e.png?1424166156" class="profielfoto">
+                <div class="jobinfo">
+                    <p class="locatie">PDX, USA</p>
+                    <p class="soort">STUDENT JOB</p>
+                </div>
+        </header>
+        
+        <aside>
+            <div class="info">
+                <h1>THE LOW DOWN</h1>
+                <p>We zoeken naar een goeie Interactive Designer die zichzelf wilt bewijzen en samen met de anderen
+                    rond zich het beste werk mogelijk wilt leveren.</p>
+            </div>
+        
+        
+            <nav>
+                <ul>
+                    <li><a href=""><img src= "pics/phone.svg" class="phone"></img></a></li>
+                    <li><a href=""><img src= "pics/world.svg" class="phone"></img></a></li>
+                    <li><a href=""><img src= "pics/message.svg" class="phone"></img></a></li>
+                </ul>
+            </nav>
+        </aside>
+        </article>
+          
+            
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="home selected"></a></li>
+                    <li><a href="favorites.html" class="favorieten"></a></li>
+                    <li><a href="chat.html" class="chat"></a></li>
+                    <li><a href="register.html" class="profiel"></a></li>
+                </ul>
+            </nav>
+        </footer>
+            
+        
+    </body>
+</html>

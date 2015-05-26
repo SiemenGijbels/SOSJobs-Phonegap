@@ -1,0 +1,312 @@
+header#top h1 {
+    text-align: center;
+    padding: 40px 40px 10px 40px;
+    color: #3e464c;
+    font-size: 25px;
+}
+
+input:focus{
+    outline: none;
+}
+
+article {
+    float: left;
+    width: 90%;
+    padding: 5% 5% 20% 5%;
+    margin-top: 0;
+}
+
+article form {
+    float: left;
+    width: 100%;
+}
+
+article form div {
+    height: 40px;
+}
+
+article form div label {
+    float: left;
+    padding: 10px 0 0 41%;
+    color: #3e464c;
+}
+
+article form div.slider_container {
+    float: right;
+    position: relative;
+    width: 45px;
+    height: 15px;
+    padding: 7.5px;
+    border: 2px solid;
+    border-color: #3e464c;
+    border-radius: 30px;
+    font-size: 1em;
+    background-color: #fff9eb;
+    cursor: pointer;
+    color: #3e464c;
+}
+
+article form div.slider_container span {
+    float: left;
+}
+
+article form div.slider_container span:last-child {
+    float: right;
+}
+
+article form div.slider_container .slider {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #f37c69;
+    top: 5px;
+    left: 5px;
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -ms-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+}
+
+article form div.slider_container .slider.on {
+    left: 100%;
+    margin-left: -25px;
+}
+
+article form .camera {
+    width: 125px;
+    height: 125px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-image: url(../imgs/Register%20foto%20logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+article form .camera input[type='file'] {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    margin: 0;
+    opacity: 0 !important;
+    cursor: pointer;
+}
+
+p.tik {
+    text-align: center;
+    padding: 20px;
+    font-size: 1em;
+    color: #3e464c;
+}
+
+article form p label {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+article form .gender {
+    display: none;
+}
+
+article form section {
+
+    float: left;
+    border: 2px solid rgba(62,70,77,1);
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 60px;
+
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+
+}
+article form section.open{
+    height: auto;
+}
+
+article form section header h1 {
+    padding-left: 5%;
+    color: #3e464c;
+}
+
+article form section header {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-repeat: no-repeat;
+    background-position: center right 5%;
+    padding-right: ;
+    background-size: 30px;
+    border-color: #3e464c;
+    cursor: pointer;
+    float: left;
+}
+
+article form section .birth_date {
+    float: left;
+    border: 2px solid;
+    border-color: #3e464c;
+    background-color: #fff9eb;
+    color: #f37c69;
+    border-radius: 10px;
+    font-size: 1em;
+    width: 100%;
+}
+article form section .birth_date input {
+    float: left;
+}
+
+article form section .birth_date h1 {
+    color: #3e464c;
+    float: left;
+    width: 90%;
+    padding: 5%;
+    padding-bottom: 10px;
+}
+
+article form section .basic_info {
+    background-image: url(../imgs/profiel.png);
+}
+
+article form section .location {
+    background-image: url(../imgs/loclogo2.png);
+    background-size: 17px;
+}
+
+article form section .other_info {
+    background-image: url(../imgs/Settings.png);
+}
+
+article form input {
+    float: left;
+    width: 90%;
+    padding: 5%;
+    border-top: 2px solid #3e464c;
+    border-left: none;
+    border-bottom: none;
+    border-right: none;
+    font-family: Bariol_Regular, sans-serif;
+    font-size: 1em;
+    color: #f37c69;
+    background-color: #fff9eb;
+}
+
+article form input[type='submit'] {
+    width: 100%;
+    padding: 5%;
+    border: 2px solid;
+    border-color: #3e464c;
+    border-radius: 10px;
+    margin: 20px 0;
+    font-family: Bariol_Regular, sans-serif;
+    font-size: 1em;
+    color: #fff9eb;
+    background-color: #f37c69;
+    background-repeat: no-repeat;
+    background-position: center left 7%;
+    cursor: pointer;
+    appearance:none;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+}
+
+article form input[type='submit'].fb {
+    background-color: #5980c1 !important;
+    background-image: url('../imgs/facebook-logo.png');
+    background-size: 10px;
+}
+
+article form input[type='submit'].google {
+    background-color: #f37c69;
+    background-image: url('../imgs/google+logo.png');
+    background-size: 20px;
+}
+
+.styled-select select {
+    border-top: 2px solid #3e464c;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    background-color: #fff9eb;
+    background-image: url(../pics/down-arrow.svg);
+    background-position: center right 5%;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    border-radius: 0;
+    color: #f37c69;
+    margin: 20px 0;
+    font-family: Bariol_Regular, sans-serif;
+    font-size: 1em;
+    width: 100%;
+    height: 75px;
+    float: left;
+    padding: 5px 4%;
+
+    -webkit-appearance:none;
+   -moz-appearance:none;
+   appearance:none;
+}
+
+article form .cv {
+    width: 90%;
+    padding: 5%;
+    border: 2px solid;
+    border-color: #3e464c;
+    border-radius: 10px;
+    margin: 20px 0;
+    font-family: Bariol_Regular, sans-serif;
+    font-size: 1em;
+    color: #f37c69;
+    background-color: #fff9eb;
+    position: relative;
+    float: left;
+    overflow: hidden;
+}
+
+article form .cv input[type='file'] {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    margin: 0;
+    opacity: 0 !important;
+    cursor: pointer;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+
+article form .cv p {
+    text-align: center;
+    padding-top: .6em;
+    color: #3e464c;
+}
+
+textarea {
+    display: block;
+    border-top: 2px solid#3e464c;
+    padding-left: 10px;
+    border-left: none;
+    border-bottom: none;
+    border-right: none;
+    width: 97.5%;
+    height: 300px;
+    margin: 20px auto;
+    padding-top: 10px;
+    font-family: Bariol_Regular, sans-serif;
+    font-size: 1em;
+    color: #f37c69;
+    background-color: #fff9eb;
+    resize: none;
+    float: left;
+}

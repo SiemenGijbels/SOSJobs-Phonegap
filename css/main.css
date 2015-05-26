@@ -1,0 +1,252 @@
+/* KLEURENPALET
+
+BACKGROUND: #FFFAF0
+ROOD: #EE7966
+GROEN: #82BD8B
+ZWART: #3f464c
+
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+.hide{
+    display: none;
+}
+.color0{
+    background-color: #EE7966;
+}
+.color1{
+    background-color: #8AC9BA;
+}
+.color2{
+    background-color: #75B588;
+}
+.color3{
+    background-color: #F28B66;
+}
+.color4{
+    background-color: #6197D0;
+}
+.color5{
+    background-color: #9F72B7;
+}
+.color6{
+    background-color: #E97696;
+}
+.color7{
+    background-color: #E9BA76;
+}
+.color8{
+    background-color: #D05472;
+}
+.color9{
+    background-color: #5B996E;
+}
+
+header#main_head{
+    position: fixed;
+    width: 100%;
+    background-color: #FFFAF0;
+    left: 0;
+    top: 0;
+
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+
+    -webkit-box-shadow: 0 3px 0 0 rgba(0,0,0,.1);
+    box-shadow: 0 3px 0 0 rgba(0,0,0,.1);
+
+}
+header#main_head.close{
+    top: -100;
+}
+header#main_head nav.main{
+    width: 90%;
+    padding: 0 5%; 
+    height: 100px;
+
+}
+header#main_head nav.main ul{
+    width: 100%;
+    float: left;
+    height: 75px;
+    margin-top: 15px;
+    text-align: center;
+}
+header#main_head nav.main ul li{
+
+    display: block;
+    float: left;
+    width: 50%;
+    padding: 0 5%;
+    height: 75px;
+    text-align: center;
+    line-height: 75px;
+}
+header#main_head nav.main ul li:first-child{
+    width: 10%;
+    height: 50px;
+    margin-top: 16px;
+}
+header#main_head nav.main ul li:last-child{
+    width: 10%;
+    height: 50px;
+    margin-top: 16px;
+}
+header#main_head nav.main ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+header#main_head nav.main ul li img{
+    margin-top: 10px;
+    height: 50px;
+}
+header#main_head nav.main ul li:first-child img{
+    height: 30px;
+}
+header#main_head nav.main ul li:last-child img{
+    height: 30px;
+}
+
+@font-face {
+    font-family: "Bariol_Regular";
+    src: url(../fonts/Bariol_Regular.otf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Bariol_Bold";
+    src: url(../fonts/Bariol-Bold.otf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Bariol_Light";
+    src: url(../fonts/Bariol-Light.otf);
+    font-weight: normal;
+}
+
+
+
+html, body{
+    font-family: Bariol_Regular, sans-serif;
+    letter-spacing: 1.5;
+}
+
+body{
+    background-color: #FFF8E8;
+}
+
+
+footer nav{
+    
+    border-top: 2px;
+    border-top-color: #3f464c;
+    border-top-style: solid;
+    background-color: #FFF8E8;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    height: 75px;
+    top: 100%;
+    margin-top: -75px;
+
+
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    
+}
+footer nav.close{
+    margin-top: 0px;
+}
+
+footer nav ul{
+    float: left;
+    width: 100%;
+    text-align: center;
+    height: 75px;
+    
+}
+
+footer nav ul li{
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    
+}
+
+footer nav ul li a{
+    display: block;
+    float: left;
+    width: 100%;
+    height: 100%;
+    background-size: 30px auto;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.home.selected{
+    background-image: url(../imgs/logo.png);
+}
+
+.favorieten.selected{
+    background-image: url(../imgs/favorieten.png);
+}
+
+.chat.selected{
+    background-image: url(../imgs/chat.png);
+}
+
+.profiel.selected{
+    background-image: url(../imgs/profiel.png);
+}
+
+.home{
+    background-image: url(../imgs/logo-kleurloos.png);
+}
+
+.favorieten{
+    background-image: url(../imgs/favorieten-kleurloos-beter.png);
+}
+
+.chat{
+    background-image: url(../imgs/chat-kleurloos.png);
+}
+
+.profiel{
+    background-image: url(../imgs/profiel-kleurloos.png);
+}
+
+@media only screen and (max-width: 330px){
+    footer nav ul li{
+        width: 50px;
+        height: 50px;
+    } 
+    
+    footer nav ul{
+        height: 50px;
+    }
+    
+    footer nav{
+        height: 50px;
+        margin-top: -50px;
+    }
+}

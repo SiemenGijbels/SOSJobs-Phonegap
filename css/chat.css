@@ -1,0 +1,67 @@
+header#main_head{
+    z-index: 1;
+}
+
+
+header#main_head #logo img{
+    height: 50px;
+}
+
+header#main_head p{
+    text-align: center;
+    font-weight: bold;
+    padding: 15px;
+}
+
+article.chatbody{
+    margin-top: 160px;
+    margin-left: 8%;
+    margin-right: 8%;
+    z-index: -999999;
+}
+
+article.chatbody section.message{
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+article.chatbody section.left div.bericht{
+    background-color: #EE7966;
+}
+
+article.chatbody section.right div.bericht{
+    background-color: #82BD8B;
+}
+
+article.chatbody section.left img.profielfoto{
+    height: 50px;
+    border-radius: 100%;
+    border: 5px solid #FFFAF0;
+    position: absolute;
+}
+
+article.chatbody section.left div.bericht{
+    color: white;
+    padding: 20px;
+    padding-left: 40px;
+    border-radius: 15px;
+    margin-left: 30px;
+}
+
+article.chatbody section.right img.profielfoto{
+    height: 50px;
+    border-radius: 100%;
+    border: 5px solid #FFFAF0;
+    position: absolute;
+    right: 0;
+}
+
+article.chatbody section.right div.bericht{
+    color: white;
+    padding: 20px;
+    padding-right: 40px;
+    border-radius: 15px;
+    margin-right: 30px;
+}

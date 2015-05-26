@@ -1,0 +1,344 @@
+header#main_head nav.tabs{
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    border-bottom:2px solid #44474D;
+
+}
+header#main_head nav.tabs ul{
+
+    text-align: center;
+
+}
+header#main_head nav.tabs ul li{
+    display: inline-block;
+    width: 30%;
+    height: 50px;
+    line-height: 50px;
+}
+
+header#main_head nav.tabs ul li a{
+    
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: .7em;
+    border-radius: 10px 10px 0 0;
+    text-decoration: none;
+    color: #EE7966;
+}
+header#main_head nav.tabs ul li a.selected{
+
+    border-top:2px solid #44474D;
+    border-left:2px solid #44474D;
+    border-right:2px solid #44474D;
+    color: #44474D;
+    font-family: Bariol_Bold;
+}
+
+header#main_head p{
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.9em;
+    padding-bottom: 15px;
+}
+
+header#main_head nav.main ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header#main_head nav.main ul li:nth-child(1) img{
+    height: 25px;
+}
+
+
+
+article.feed{
+    
+    z-index: -9999;
+    float: left;
+    width: 90%;
+    padding: 120px 5% 70px 5%;
+    font-family: Bariol_Regular;
+}
+
+article.feed section{
+    
+    float: left;
+    width: 100%;
+    height: auto;
+    border:2px solid #44474D;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+
+    -webkit-box-shadow: 0px 5px 0 0 rgba(0,0,0,.1);
+    box-shadow: 0px 5px 0 0 rgba(0,0,0,.1);
+}
+
+article.feed section header{
+    
+    float: left;
+    width: 100%;
+    height: 100px;
+}
+article.feed section header a{
+
+    display: block;
+    float: left;
+    width: 90%;
+    padding: 0 5%;
+    height: 100%;
+    color: white;
+    text-decoration: none;
+}
+article.feed section header a img{
+    height: 40px;
+    margin-top: 30px;
+    float: left;
+    border-radius: 50%;
+    border: 2px solid #FFFAF0;
+}
+article.feed section header div{
+    float: left;
+    width: 55%;
+    padding: 35px 5%;
+}
+article.feed section header .detail{
+    float: right;
+    width: 40px;
+    height: 100px;
+    background-image: url(../pics/pijltje.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+}
+article.feed section header a h1{
+    width: 100%;
+    float: left;
+    font-size: .8em;
+    font-weight: bold;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    white-space: nowrap;
+}
+article.feed section header a h2{
+    float: left;
+    width: 90%;
+    margin-top: 10px;
+    padding: 2.5px 25px;
+    font-size: .7em;
+    font-weight: normal;
+    background-image: url(../pics/location.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center left;
+}
+
+article.feed section aside{
+    float: left;
+    width: 100%;
+    height: 60px;
+}
+article.feed section aside nav{
+    
+    float: left;
+    width: 100%;
+    height: 100%;
+
+}
+article.feed section aside nav ul li{
+
+    display: block;
+    float: left;
+    width: 25%;
+    height: 60px;
+    cursor: pointer;
+    font-size: .8em;
+    text-align: center;
+    line-height: 60px;
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+article.feed section aside nav ul li.message{
+
+    background-image: url(../pics/mail.svg);
+}
+article.feed section aside nav ul li.share{
+
+    background-image: url(../pics/share.svg);
+    background-size: 17px;
+}
+article.feed section aside nav ul li.delete{
+
+    background-image: url(../pics/delete.svg);
+}
+
+
+
+
+
+
+article.detail{
+    position: fixed;
+    z-index: 9999;
+    left: -2px;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y:scroll; 
+    background-color: #FFFAF0;
+    border-left: 2px solid #44474D;
+
+     -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+article.detail.close{
+    left: 100%;
+}
+
+article.detail header{
+    
+
+    float: left;
+    width: 90%;
+    padding: 5%;
+    text-align: center;
+    color: #FFFAF0;
+    border-bottom: 2px solid #44474D;
+
+
+}
+
+article.detail header h1{
+    
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    height: auto;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 1em;
+    text-transform: uppercase;
+
+}
+
+article.detail header h1 span.back{
+    
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    top: 50%;
+    left: 0;
+    margin-top: -17.5px;
+    cursor: pointer;
+
+    background-image: url(../pics/back-arrow.svg);
+    background-position: center;
+    background-size: 25px;
+    background-repeat: no-repeat;
+
+    
+}
+
+article.detail header h2{
+    
+    float: left;
+    width: 90%;
+    padding: 5%;
+    text-align: center;
+    font-size: .8em;
+
+}
+
+article.detail header img{
+    margin: 20px 0;
+    height: 75px;
+    border: 3px solid #FFFAF0;
+    border-radius: 50%;
+}
+
+article.detail .jobinfo{
+    
+    float: left;
+    width: 80%;
+    padding: 10%;
+    font-size: 1em;
+    
+
+}
+article.detail .jobinfo p{
+    float: left;
+    display: block;
+    padding: 0px 0px 0px 30px;
+    text-align: right;
+    background-image: url(../pics/location.svg);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: center left;
+}
+
+article.detail aside .info{
+    
+    float: left;
+    width: 80%;
+    padding: 10%;
+    
+
+}
+article.detail .info h1{
+
+    font-family: Bariol_Bold;
+    font-size: 1.2em;
+}
+article.detail .info p{
+    
+    margin-top: 20px;
+    font-size: .8em;
+}
+
+article.detail aside nav{
+    
+    float: left;
+    width: 100%;
+    text-align: center;
+    
+
+}
+article.detail aside nav ul li{
+    display: inline-block;
+    width: 25%;
+    height: 35px;
+    text-align: center;
+}
+article.detail aside nav ul li img{
+    height: 100%;
+}
+
+article.detail .jobinfo p:last-child{
+    
+    float: right;
+}
+
+.red{
+    background-color: #EE7966;
+}
+
+.green{
+    background-color: #82BD8B;
+}
+
+.blue{
+    background-color: #8BCBC4;
+}
