@@ -43,6 +43,8 @@ header a{
 }
 
 .settings{
+    float: left;
+    width: 90%;
     padding: 5%;
     border-bottom: 2px solid #3f464c;
     background-repeat: no-repeat;

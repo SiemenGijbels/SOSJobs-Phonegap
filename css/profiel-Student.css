@@ -126,8 +126,10 @@ article.profile .jobinfo p{
 article.profile aside .info{
     
     float: left;
+    display: block;
     width: 80%;
     padding: 10%;
+    margin-bottom: 80px;
     
 
 }
