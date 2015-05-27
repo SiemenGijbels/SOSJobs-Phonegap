@@ -12,8 +12,20 @@
         Hello World sample application that responds to the deviceready event.
     </description>
 
-    <author href="http://phonegap.com" email="support@phonegap.com">
-        PhoneGap Team
+    <author href="http://www.rachuoanrejeb.be" email="rachouan15@hotmail.fr">
+        Rachouan Rejeb
+    </author>
+    <author href="http://www.jonaspardon.be" email="jonaspardon@hotmail.com">
+        Jonas Pardon
+    </author>
+    <author href="http://dtsl.ehb.be/~jef.vastenavondt" email="jef.vastenavondt@icloud.com">
+        Jef Vastenavondt
+    </author>
+    <author href="http://dtsl.ehb.be/~mathias.de.coster" email="mathias.decoster@gmail.com">
+        Mathias De Coster
+    </author>
+    <author href="http://dtsl.ehb.be/~siemen.gijbels" email="gijbelssiemen@gmail.com">
+        Siemen Gijbels
     </author>
 
     <!--
@@ -73,16 +85,16 @@
     <icon src="imgs/logo.png"   gap:platform="android"    gap:qualifier="ldpi" />
     <icon src="imgs/logo.png"   gap:platform="android"    gap:qualifier="mdpi" />
     <icon src="imgs/logo.png"   gap:platform="android"    gap:qualifier="hdpi" />
-    <icon src="imgs/logo.png"  gap:platform="android"    gap:qualifier="xhdpi" />
-    <icon src="imgs/logo.png"     gap:platform="blackberry" />
-    <icon src="imgs/logo.png"     gap:platform="blackberry" gap:state="hover"/>
-    <icon src="imgs/logo.png"            gap:platform="ios"        width="57" height="57" />
-    <icon src="imgs/logo.png"            gap:platform="ios"        width="72" height="72" />
-    <icon src="imgs/logo.png"         gap:platform="ios"        width="114" height="114" />
-    <icon src="imgs/logo.png"         gap:platform="ios"        width="144" height="144" />
-    <icon src="imgs/logo.png"          gap:platform="webos" />
-    <icon src="imgs/logo.png"  gap:platform="winphone" />
-    <icon src="imgs/logo.png" gap:platform="winphone"   gap:role="background" />
+    <icon src="imgs/logo.png"   gap:platform="android"    gap:qualifier="xhdpi" />
+    <icon src="imgs/logo.png"   gap:platform="blackberry" />
+    <icon src="imgs/logo.png"   gap:platform="blackberry" gap:state="hover"/>
+    <icon src="imgs/logo.png"   gap:platform="ios"        width="57" height="57" />
+    <icon src="imgs/logo.png"   gap:platform="ios"        width="72" height="72" />
+    <icon src="imgs/logo.png"   gap:platform="ios"        width="114" height="114" />
+    <icon src="imgs/logo.png"   gap:platform="ios"        width="144" height="144" />
+    <icon src="imgs/logo.png"   gap:platform="webos" />
+    <icon src="imgs/logo.png"   gap:platform="winphone" />
+    <icon src="imgs/logo.png"   gap:platform="winphone"   gap:role="background" />
 
     <!-- Define app splash screen for each platform. -->
     <gap:splash src="res/screen/android/screen-ldpi-portrait.png"       gap:platform="android" gap:qualifier="port-ldpi" />
