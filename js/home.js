@@ -3,7 +3,9 @@ $(function  () {
 	function init () {
 
 
+		firstOpen();
 
+		
 		$.ajax({
 		  url: "http://rachouanrejeb.be/sosjobs/api/vacancies/",
 		  context: document.body
@@ -22,14 +24,20 @@ $(function  () {
 			htmlString += '</a></header>';
 			htmlString += '<aside><header class="hide"><h1>vacancie options</h1></header>';
 			htmlString += '<nav><header class="hide"><h1>vacancie navigation</h1></header>';
-			htmlString += '<ul><li class="fav" id="'+val.id+'"><span class="hide">favorite</span></li><li class="share"><span class="hide">>share</span></li><li><span>APPLY</span></li><li class="delete"><span class="hide">>delete</span></li></ul>';
+			htmlString += '<ul><li class="fav" id="'+val.id+'"><span class="hide">favorite</span></li><li class="share"><span class="hide">share</span></li><li><span class="apply">APPLY</span></li><li class="delete"><span class="hide">delete</span></li></ul>';
 			htmlString += ' </nav> </aside>';
 
-			var newSection = $('<section/>').html(htmlString);
+			var newSection = $('<section/>').html(htmlString).addClass("animated fadeInUp");
 
 			$("article.feed").append(newSection);
 		});
 
+
+			$(".preloader").addClass("animated fadeOut");
+			setTimeout(function  () {
+				$(".preloader").removeClass("animated fadeOut");
+				$(".preloader").addClass("hide");
+			}, 1000);
 			$("article section .info").on("click",function (e) {
 
 				e.preventDefault();
@@ -150,11 +158,14 @@ $(function  () {
 
 				$("meta[name='theme-color']").attr("content","#F9EACD");
 			});
+            
+            var user = JSON.parse(localStorage.getItem('user'));
 
 			$(".fav").on("click",function (e) {
 
+				var fav = $(this);
 				$("#vacancy_id").val($(this).attr('id'));
-				$("#student_id").val(2);
+				$("#student_id").val(user.id);
 
 				var postData = $(favourite_form).serializeArray();
 	            var formURL = $(favourite_form).attr("action");
@@ -167,6 +178,7 @@ $(function  () {
 	                success:function(data, textStatus, jqXHR) 
 	                {
 	                    console.log(data);
+	        			$(fav).addClass("checked");
 	                },
 	                error: function(jqXHR, textStatus, errorThrown) 
 	                {
@@ -209,6 +221,111 @@ $(function  () {
 		
 
 		$("meta[name='theme-color']").attr("content","#44474D");
+	}
+
+
+
+
+
+	function firstOpen () {
+
+		var loggedIn = localStorage.getItem("loggedIn");
+		var user = JSON.parse(localStorage.getItem("user"));
+		var student_id = parseInt(user.id);
+
+		console.log(user);
+
+		if(loggedIn){
+
+			var sendInfo = {
+           achievement_id: 1,
+           student_id: student_id
+       };
+
+        $.ajax(
+        {
+            url : "http://rachouanrejeb.be/sosjobs/api/getAchievement/",
+            type: "POST",
+            data : sendInfo,
+            success:function(data, textStatus, jqXHR) 
+            {
+    			var min = parseInt(data.min);
+    			var max = parseInt(data.max);
+
+    			console.log(data.min,data.max);
+
+    			if( min < max){
+
+    				min++;
+
+    				console.log("update achievement");
+
+    				var sendInfo = {
+	                   achievement_id: data.achievement_id,
+	                   student_id: student_id,
+	                   min:min
+	               };
+
+    				$.ajax(
+	                {
+	                    url : "http://rachouanrejeb.be/sosjobs/api/updateAchievement/",
+	                    type: "POST",
+	                    data : sendInfo,
+	                    success:function(data, textStatus, jqXHR) 
+	                    {
+
+	            			console.log(data);
+
+                            var id = parseInt(data.student_id);
+
+                            console.log(id,student_id);
+
+                            if(id == student_id){
+                            	var sendInfo = {
+				                   achievement_id: data.achievement_id,
+				                   student_id: student_id,
+				                   unlock:1
+				               };
+
+	        				$.ajax(
+			                {
+			                    url : "http://rachouanrejeb.be/sosjobs/api/unlockAchievement/",
+			                    type: "POST",
+			                    data : sendInfo,
+			                    success:function(data, textStatus, jqXHR) 
+			                    {
+			            			console.log(data);
+			            			$(".achievement_container section img").attr("src","pics/achievements/"+data.name+"-unlocked.svg");
+			            			$(".achievement_container section h1").text(data.name);
+			            			$(".achievement_container section p").text(data.description);
+
+			            			$(".achievement_container").addClass("open");
+			                    },
+			                    error: function(jqXHR, textStatus, errorThrown) 
+			                    {
+			                        console.log(textStatus);  
+			                    }
+			                });
+                            }
+	                    },
+	                    error: function(jqXHR, textStatus, errorThrown) 
+	                    {
+	                        console.log(textStatus);  
+	                    }
+	                });
+
+    			}
+    			
+            },
+            error: function(jqXHR, textStatus, errorThrown) 
+            {
+                console.log(textStatus);  
+            }
+        });
+
+		}else{
+			window.location.replace("login.html");
+		}
 	}
 
 });

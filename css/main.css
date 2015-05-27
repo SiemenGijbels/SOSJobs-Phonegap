@@ -52,6 +52,32 @@ ZWART: #3f464c
     background-color: #5B996E;
 }
 
+article.preloader{
+    position: fixed;
+    z-index: 9998;
+    width: 100%;
+    height: 100%;
+    background-color: #FFF8E8;
+}
+article.preloader section{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    width: 100px;
+    height: 100px;
+    background-image: url(../pics/logo.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    -webkit-animation: logo_inside 2s linear infinite;
+    -moz-animation: logo_inside 2s linear infinite;
+    -ms-animation: logo_inside 2s linear infinite;
+    animation: logo_inside 2s linear infinite;
+}
+
 article.achievement_container{
     position: fixed;
     z-index: 9999;
@@ -312,18 +338,75 @@ footer nav ul li a{
     background-image: url(../imgs/profiel-kleurloos.png);
 }
 
-@media only screen and (max-width: 330px){
-    footer nav ul li{
-        width: 50px;
-        height: 50px;
-    } 
-    
-    footer nav ul{
-        height: 50px;
+
+@keyframes logo_inside {
+    0% {
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
     }
-    
-    footer nav{
-        height: 50px;
-        margin-top: -50px;
+    100% {
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
+@-moz-keyframes logo_inside {
+    0% {
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes logo_inside {
+    0% {
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@-ms-keyframes logo_inside {
+    0% {
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+

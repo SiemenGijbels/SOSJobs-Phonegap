@@ -1,113 +1,231 @@
-/* KLEURENPALET
+article.profile{
 
-BACKGROUND: #FFFAF0
-ROOD: #EE7966
-GROEN: #82BD8B
-ZWART: #3f464c
-
-*/
-
-header{
-    color: #FFFAF0;
+    float: left;
     width: 100%;
-    height: 270px;
-    background-color: #f47d67;
+    height: 100%;
+    overflow-y:scroll; 
+    background-color: #FFFAF0;
+
+     -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
 }
 
-.headercontainer{
-    text-align: justify;
-    -ms-text-justify: distribute-all-lines;
-    text-justify: distribute-all-lines;
-    margin-left: 5%;
-    margin-right: 5%;
+article.profile.close{
+    left: 100%;
 }
 
-.headercontainer img{
-    height: 30px;
-    padding: 20px;
-}
+article.profile header{
+    
 
-.headercontainer:after{
-    content: '';
-    width: 80%;
-    display: inline-block;
-    font-size: 0;
-    line-height: 0;
-}
-
-#logo {
-    height: 50px;
-}
-
-header .persoon{
-    clear: left;
-    margin-top: -20px;
+    float: left;
+    width: 90%;
+    padding: 5%;
     text-align: center;
+    color: #FFFAF0;
+    border-bottom: 2px solid #44474D;
+
+
 }
 
-header .persoon .profielfoto{
-    border-radius: 50%;
-    margin-top: 10px;
-    width: 60px;
-    height: 60px;
-    border: 4px solid #FFFAF0; 
-}
-
-header .persoon .vakgebied{
-    margin-top: 20px;
-    font-size: 0.8em;
-}
-
-header .persoon .loco{
-    font-weight: lighter;
-    font-size: 0.6em;
+article.profile header h1{
+    
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    height: auto;
+    margin: 20px auto;
     text-align: center;
-    display: inline-block;
+    font-size: 1em;
+    text-transform: uppercase;
+
+}
+
+article.profile header h1 span.back{
+    
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    top: 50%;
+    left: 0;
+    margin-top: -17.5px;
+    cursor: pointer;
+
+    background-image: url(../pics/back-arrow.svg);
+    background-position: center;
+    background-size: 25px;
+    background-repeat: no-repeat;
+
     
 }
 
-header .persoon .loco p{
-    background: url(../imgs/loclogo.png) left center no-repeat;
-    background-size: 7px;
-    height: 20px;
-    line-height: 20px;
-    text-indent: 10px;
-}
-
-.contact-icons{
-    width: 100%;
+article.profile header h2{
+    
+    float: left;
+    width: 90%;
+    padding: 0 5%;
     text-align: center;
-    margin-top: 30px;
+    font-size: .8em;
+
 }
 
-.contact-icons img{
-    height: 40px;
-    margin: 0 10%;
+article.profile header div.profile_pic{
+    margin: 40px auto;
+    height: 75px;
+    width: 75px;
+    border: 3px solid #FFFAF0;
+    border-radius: 50%;
+    overflow: hidden;
+    text-align: center;
 }
 
-.information{
-    width:  90%;
+article.profile header img{
+    height: 100%;
+}
+
+article.profile .jobinfo{
+    
+    float: left;
+    width: 90%;
     padding: 5%;
-    margin-left: auto;
-    margin-right: auto;
-}
-.information section{
-    margin-top: 40px;
-}
-
-h3{
+    font-size: 1em;
+    
 
 }
+article.profile .jobinfo p{
+    margin: 20px auto;
+    display: block;
+    width: 100px;
+    text-align: center;
+    background-image: url(../pics/location.svg);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: center left;
+}
 
+article.profile aside .info{
+    
+    float: left;
+    width: 80%;
+    padding: 10%;
+    
 
+}
+article.profile .info h1{
 
+    font-family: Bariol_Bold;
+    font-size: 1.2em;
+}
+article.profile .info p{
+    
+    margin-top: 20px;
+    font-size: .8em;
+}
 
+article.profile aside nav{
+    
+    float: left;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    
 
+}
+article.profile aside nav ul li{
+    display: inline-block;
+    width: 25%;
+    height: 35px;
+    text-align: center;
+}
+article.profile aside nav ul li img{
+    height: 100%;
+}
 
+article.profile .jobinfo p:last-child{
+    
+    float: right;
+}
 
+article.achievements_profile{
 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    overflow-y:scroll; 
+    background-color: #FFFAF0;
 
+}
+article.achievements_profile header{
 
+    float: left;
+    width: 100%;
 
+}
+article.achievements_profile header h1{
 
+    float: left;
+    position: relative;
+    width: 90%;
+    padding: 0 5%;
+    height: 100px;
+    line-height: 100px;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-align: center;
 
+}
+article.achievements_profile section{
+
+    float: left;
+    width: 90%;
+    padding: 5%;
+    text-align: center;
+
+}
+article.achievements_profile section ul li{
+
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    cursor: pointer;
+
+}
+article.achievements_profile section ul li img{
+
+    height: 75px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid #44474D;
+
+}
+
+article.achievements_profile section ul li h1{
+
+    font-size: .8em;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+}
+
+article.achievements_profile header h1 span{
+    
+    position: absolute;
+    left: 95%;
+    margin-left: -50px;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    margin-top: -25px;
+    line-height: 100px;
+    background-image: url(../pics/pijltje.svg);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}

@@ -205,11 +205,25 @@ article.feed section aside nav ul li{
     line-height: 60px;
     background-size: 25px;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
 
 }
 
 article.feed section aside nav ul li.fav{
+
+    background-image: url(../pics/star_empty.svg);
+
+    -ms-transform-origin: center center; /* IE 9 */
+    -webkit-transform-origin: center center; /* Chrome, Safari, Opera */
+    transform-origin: center center;
+
+     -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -ms-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+article.feed section aside nav ul li.fav.checked{
 
     background-image: url(../pics/star.svg);
 }

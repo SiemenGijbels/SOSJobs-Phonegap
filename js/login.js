@@ -12,6 +12,8 @@ $(function (){
                 $("#login").submit(function(e) {
 
                     e.preventDefault();
+                        $(".preloader").removeClass("hide");
+                    $(".preloader").addClass("animated fadeIn");
 
                     var postData = $(this).serializeArray();
                     var formURL = $(this).attr("action");
@@ -33,6 +35,12 @@ $(function (){
                                                 window.location.replace("index.html");
                                 }else{
                                         console.log("user doesn't exist");
+                                        $(".preloader").removeClass("animated fadeIn");
+                                        $(".preloader").addClass("animated fadeOut");
+                                        setTimeout(function  () {
+                                                $(".preloader").removeClass("animated fadeOut");
+                                                $(".preloader").addClass("hide");
+                                        }, 1000);
                                 }
 
                     
