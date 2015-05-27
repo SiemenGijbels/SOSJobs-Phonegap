@@ -38,7 +38,8 @@ article.profile header h1{
     padding: 5%;
     height: auto;
     text-align: center;
-    font-size: 1em;
+    font-size: 1.2em;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
 
 }
@@ -65,7 +66,7 @@ article.profile header h1 span.settings_ico{
     
     position: absolute;
     height: 50px;
-    width: 35px;
+    width: 50px;
     top: 50%;
     right: 5%;
     margin-top: -25px;
@@ -73,7 +74,7 @@ article.profile header h1 span.settings_ico{
 
     background-image: url(../pics/settings.svg);
     background-position: center;
-    background-size: 50px;
+    background-size: 40px;
     background-repeat: no-repeat;
 
     
@@ -85,7 +86,10 @@ article.profile header h2{
     width: 90%;
     padding: 0 5%;
     text-align: center;
-    font-size: .8em;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-family: Bariol_Light;
+    letter-spacing: 1.5px;
 
 }
 
@@ -114,13 +118,14 @@ article.profile .jobinfo{
 }
 article.profile .jobinfo p{
     margin: 20px auto;
+    float: left;
     display: block;
-    width: 100px;
+    width: 100%;
+    font-size: 1.2em;
     text-align: center;
-    background-image: url(../pics/location.svg);
-    background-repeat: no-repeat;
-    background-size: 15px;
-    background-position: center left;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: Bariol_Bold;
 }
 
 article.profile aside .info{
