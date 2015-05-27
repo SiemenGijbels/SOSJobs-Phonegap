@@ -21,7 +21,7 @@ $(function () {
                     htmlString += '</a></header>';
                     htmlString += '<aside><header class="hide"><h1>vacancie options</h1></header>';
                     htmlString += '<nav><header class="hide"><h1>vacancie navigation</h1></header>';
-                    htmlString += '<ul><li class="message"><span class="hide">message</span></li><li class="share"><span class="hide">>share</span></li><li><span>APPLY</span></li><li class="delete"><span class="hide">>delete</span></li></ul>';
+                    htmlString += '<ul><li class="message"><span class="hide">message</span></li><li class="share"><span class="hide">share</span></li><li><span>APPLY</span></li><li class="delete" id="' + val.id + '"><span class="hide">delete</span></li></ul>';
                     htmlString += ' </nav> </aside>';
 
                     var newSection = $('<section/>').html(htmlString).addClass("animated fadeInUp");
@@ -34,6 +34,26 @@ $(function () {
                                                 $(".preloader").removeClass("animated fadeOut");
                                                 $(".preloader").addClass("hide");
                                         }, 1000);
+
+                                        $('.delete').on("click",function () {
+                                            var id = $(this).attr("id");
+
+                                            $.ajax(
+                                            {
+                                                url : "http://rachouanrejeb.be/sosjobs/api/deleteFavourite/"+id,
+                                                type: "GET",
+                                                success:function(data, textStatus, jqXHR) 
+                                                {
+                                                    console.log(data);
+
+                                            
+                                                },
+                                                error: function(jqXHR, textStatus, errorThrown) 
+                                                {
+                                                    console.log(textStatus);  
+                                                }
+                                            });
+                                        });
             });
         } else {
             window.location.replace("login.html");
