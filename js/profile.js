@@ -38,6 +38,15 @@ $(function  () {
                 });
 
             	$(".achievements_profile section ul").html(htmlstring);
+
+            	$(".achievement_ico").on('click',function  () {
+
+            		$(".achievements_profile").addClass("open");
+            		$(".achievements_profile .back").on("click",function  () {
+            			$(".achievements_profile").removeClass("open");
+            		});
+
+            	});
             });
 
 		}
