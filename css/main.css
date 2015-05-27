@@ -54,7 +54,6 @@ ZWART: #3f464c
 
 article.preloader{
     position: fixed;
-    z-index: 9998;
     width: 100%;
     height: 100%;
     background-color: #FFF8E8;
@@ -158,6 +157,7 @@ article.achievement_container section p{
 header#main_head{
     position: fixed;
     width: 100%;
+    z-index: 9998;
     background-color: #FFFAF0;
     left: 0;
     top: 0;
@@ -256,7 +256,8 @@ body{
 
 
 footer nav{
-    
+
+    z-index: 9997;
     border-top: 2px;
     border-top-color: #3f464c;
     border-top-style: solid;

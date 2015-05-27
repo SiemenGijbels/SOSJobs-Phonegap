@@ -186,6 +186,12 @@ article.achievements_profile{
 
 }
 
+
+
+
+article.achievements_profile.open{
+    left: 0;
+}
 article.settings_profile{
 
     position: fixed;
@@ -204,12 +210,6 @@ article.settings_profile{
     -o-transition: all .3s ease-out;
     transition: all .3s ease-out;
 }
-
-
-article.achievements_profile.open{
-    left: 0;
-}
-
 
 article.settings_profile.open{
     right: 0;

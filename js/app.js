@@ -14,8 +14,9 @@ $(function () {
 
 			if(prevScroll+50 < top){
 
-				$("header#main_head").addClass("close");
+				
 				$("footer nav").addClass("close");
+				$("header#main_head").addClass("close");
 
 				prevScroll = top;
 
@@ -23,8 +24,8 @@ $(function () {
 
 			if(prevScroll-20 > top){
 
-				$("header#main_head").removeClass("close");
 				$("footer nav").removeClass("close");
+				$("header#main_head").removeClass("close");
 
 				//prevScroll = top;
 
