@@ -78,7 +78,6 @@
     <gap:plugin name="org.apache.cordova.vibration" />
 
     <!-- Third party plugins -->
-    <gap:plugin name="org.apache.cordova.statusbar" version="0.1.4" />
 
     <!-- Define app icon for each platform. -->
     <icon src="imgs/logo.png" />
