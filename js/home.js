@@ -230,12 +230,11 @@ $(function  () {
 	function firstOpen () {
 
 		var loggedIn = localStorage.getItem("loggedIn");
-		var user = JSON.parse(localStorage.getItem("user"));
-		var student_id = parseInt(user.id);
-
-		console.log(user);
 
 		if(loggedIn){
+
+			var user = JSON.parse(localStorage.getItem("user"));
+			var student_id = parseInt(user.id);
 
 			var sendInfo = {
            achievement_id: 1,
@@ -323,8 +322,6 @@ $(function  () {
             }
         });
 
-		}else{
-			window.location.replace("login.html");
 		}
 	}
 
