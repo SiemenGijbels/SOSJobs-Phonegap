@@ -1,11 +1,13 @@
+ var loggedIn = localStorage.getItem("loggedIn");
+
+if(!loggedIn){
+
 $(function (){
 
 	function init () {
 
 
-                var loggedIn = localStorage.getItem("loggedIn");
-
-                if(!loggedIn){
+               
 
                 console.log("init");
 
@@ -52,12 +54,16 @@ $(function (){
                     });
                 });
 
-                }else{
-                        window.location.replace("profiel-Student.html");
-                }
+                
 
 		
 	}
 
 	init();
 });
+
+
+}else{
+    
+    window.location.replace("profiel-Student.html");
+}
