@@ -12,7 +12,7 @@
     <meta name="theme-color" content="#F9EACD">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script language="JavaScript" type="text/javascript" src="js/app.js"></script>
-    <script language="JavaScript" type="text/javascript" src="js/register.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js/vacature.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/vacature.css">
     <link rel="icon" type="image/png" href="pics/logo.png">
@@ -25,19 +25,21 @@
     </header>
 
     <article>
-        <form id="register_student" action="http://rachouanrejeb.be/sosjobs/api/insertUser/" method='post'>
-
-            
+        <form id="vacature" action="http://rachouanrejeb.be/sosjobs/api/insertVacancie/" method='post'>
 
             <section class="open">
                 <header class="basic_info">
                     <h2>Basic info</h2>
                 </header>
+                <input type="text" class="hide" name="creator_id" id="creator_id" value="10"/>
+                <input type="text" class="lat hide" name="latitude" id="latitude" value="0"/>
+                <input type="text" class="lng hide" name="longitude" id="longitude" value="0"/>
+                
                 <input type="text" class="input" placeholder="Titel" id="title" name="title" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Titel'" />
-                <textarea id="about" name="about" placeholder="Jobomschrijving" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Jobomschrijving'"></textarea>
-                <input type="text" class="locatie" placeholder="Locatie" id="locatie" name="locatie" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Locatie'" />
-                <input type="date" id="from_date" name="from_date" placeholder="Vanaf datum dd/mm/yyyy"/>
-                <input type="date" id="to_date" name="to_date" placeholder="Tot datum dd/mm/yyyy"/>
+                <textarea id="description" name="description" placeholder="Jobomschrijving" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Jobomschrijving'"></textarea>
+                <input type="text" class="locatie" placeholder="Locatie" id="location" name="location" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Locatie'" />
+                <input type="date" id="fromdate" name="fromdate" placeholder="Vanaf datum dd/mm/yyyy"/>
+                <input type="date" id="todate" name="todate" placeholder="Tot datum dd/mm/yyyy"/>
                 <div class="styled-select">
                     <select name="category" id="category">
                         <option id="kjl">Kies de categorie</option>
@@ -82,5 +84,9 @@
         </ul>
     </nav>
 </footer>
+
+<article class="preloader hide ">
+            <section></section>
+        </article>
 
 </html>
