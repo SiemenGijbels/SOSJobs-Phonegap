@@ -1,28 +1,45 @@
 .logo {
-    width: 30px;
-    height: 30px;
+    height: 55px;
+    margin: 20px 0 10px 0;
 }
 
 header {
     text-align: center;
     margin-top: 50px;
+    text-transform: uppercase;
+}
+h2 {
+    font-family: Bariol_Bold;
+    color: #3e464c;
+    font-size: 2em;
 }
 
-h2, h3 {
-    font-weight: normal;
+h3 {
+    font-family: Bariol_Light;
     color: #3e464c;
 }
 
 article {
     float: left;
-    width: 90%;
-    padding: 5% 5% 20% 5%;
+    width: 80%;
+    padding: 10% 10% 20% 10%;
     text-align: center;
 }
 
 article form {
     float: left;
     width: 100%;
+}
+article form a{
+    float: left;
+    display: block;
+    width: 50%;
+}
+article form a:first-child{
+    text-align: left;
+}
+article form a:last-child{
+    text-align: right;
 }
 
 article form p {
@@ -67,14 +84,12 @@ input {
     border: 2px solid #3e464c;
     border-color: #3e464c;
     border-radius: 10px;
-    width: 95%;
-    padding: 2.5%;
-    padding-left: 10px;
-    height: 40px;
+    width: 90%;
+    padding: 5%;
     margin-top: 15px;
     margin-bottom: 15px;
     font-family: Bariol;
-    font-size: 1.5em;
+    font-size: 1em;
     color: #f37c69;
     text-decoration: none;
     background-color: #fff9eb;
@@ -86,6 +101,7 @@ input[type="submit"] {
     width: 100%;
     height: 60px;
     line-height: 60px;
+    cursor: pointer;
 }
 
 input.fb {

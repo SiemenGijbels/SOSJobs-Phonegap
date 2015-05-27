@@ -76,6 +76,8 @@ article.feed section{
 
     -webkit-box-shadow: 0px 5px 0 0 rgba(0,0,0,.1);
     box-shadow: 0px 5px 0 0 rgba(0,0,0,.1);
+    -webkit-animation-duration: .5s; /* Chrome, Safari, Opera */
+    animation-duration: .5s;
 }
 
 article.feed section header{

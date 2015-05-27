@@ -52,6 +52,7 @@ $(function () {
                 success:function(data, textStatus, jqXHR) 
                 {
                     console.log(data);
+                    localStorage.setItem('user',JSON.stringify(data));
 
                     var id = 1;
 
@@ -87,7 +88,12 @@ $(function () {
                 {
                     console.log(textStatus);  
                 }
+                
             });
+            
+            localStorage.setItem('loggedIn',true);
+            window.location.replace("index.html");
+            
         });
 
     }

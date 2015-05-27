@@ -1,4 +1,4 @@
- var loggedIn = localStorage.getItem("loggedIn");
+var loggedIn = localStorage.getItem("loggedIn");
 
 if(!loggedIn){
 

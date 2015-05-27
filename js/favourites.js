@@ -37,25 +37,39 @@ $(function () {
                                                 $(".preloader").addClass("hide");
                                         }, 1000);
 
-                                        $('.delete').on("click",function () {
-                                            var id = $(this).attr("id");
+                $('.delete').on("click",function () {
 
-                                            $.ajax(
-                                            {
-                                                url : "http://rachouanrejeb.be/sosjobs/api/deleteFavourite/"+id,
-                                                type: "GET",
-                                                success:function(data, textStatus, jqXHR) 
-                                                {
-                                                    console.log(data);
+                    var post = $(this).parent().parent().parent().parent();
 
-                                            
-                                                },
-                                                error: function(jqXHR, textStatus, errorThrown) 
-                                                {
-                                                    console.log(textStatus);  
-                                                }
-                                            });
-                                        });
+                    $(post).removeClass("animated fadeInUp");
+                    $(post).addClass("animated slideOutLeft");
+                    setTimeout(function  () {
+                            $(post).slideUp(100);
+                    }, 500);
+                    var id = $(this).attr("id");
+                    var user = JSON.parse(localStorage.getItem('user'));
+
+                    var sendInfo = {
+                           vacancy_id: id,
+                           student_id: user.id,
+                       };
+
+                    $.ajax(
+                    {
+                        url : "http://rachouanrejeb.be/sosjobs/api/deleteFavourite/",
+                        type: "POST",
+                        data : sendInfo,
+                        success:function(data, textStatus, jqXHR) 
+                        {
+                            console.log(data);
+                            
+                        },
+                        error: function(jqXHR, textStatus, errorThrown) 
+                        {
+                            console.log(textStatus);  
+                        }
+                    });
+                });
             });
         } else {
             window.location.replace("login.html");
@@ -64,4 +78,5 @@ $(function () {
 
     }
     init();
+
 });
