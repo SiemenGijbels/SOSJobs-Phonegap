@@ -47,6 +47,15 @@ $(function  () {
             		});
 
             	});
+                
+                $(".settings_ico").on('click',function  () {
+
+            		$(".settings_profile").addClass("open");
+            		$(".settings_profile .back").on("click",function  () {
+            			$(".settings_profile").removeClass("open");
+            		});
+
+            	});
             });
 
 		}

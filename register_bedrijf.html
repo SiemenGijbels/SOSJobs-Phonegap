@@ -12,7 +12,7 @@
     <meta name="theme-color" content="#F9EACD">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script language="JavaScript" type="text/javascript" src="js/app.js"></script>
-    <script language="JavaScript" type="text/javascript" src="js/register.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js/register_employer.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/register.css">
     <link rel="icon" type="image/png" href="pics/logo.png">
@@ -26,7 +26,7 @@
     </header>
 
     <article>
-        <form id="register_student" action="http://rachouanrejeb.be/sosjobs/api/insertEmployer/" method='post'>
+        <form id="register_employer" action="http://rachouanrejeb.be/sosjobs/api/insertEmployer/" method='post'>
 
             <div class='camera'>
                 <input id="pic" name="pic" type="file" accept="image/*">
@@ -35,32 +35,17 @@
             <p class="tik">Tik om een
                 <br>foto te kiezen.</p>
 
-            <div>
-                <label>Geslacht</label>
-                <div class='slider_container'>
-                    <span>M</span>
-                    <div class='slider on'>
-                    </div>
-                    <span>V</span>
-                </div>
-            </div>
-
             <section class="open">
                 <header class="basic_info">
                     <h1>Basic info</h1>
                 </header>
-                <input type="text" class="gender hide" name="gender" id="gender" value="M" />
                 <input type="text" class="lat hide" name="latitude" id="latitude" value="0"/>
                 <input type="text" class="lng hide" name="longitude" id="longitude" value="0"/>
                 <input type="text" class="picture hide" name="picture" id="picture" value=""/>
-                <input type="text" class="input" placeholder="Voornaam" id="name" name="name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Voornaam'" />
-                <input type="text" class="input" placeholder="Familienaam" id="last_name" name="last_name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Familienaam'" />
+                <input type="text" class="input" placeholder="Bedrijfsnaam" id="company" name="company" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Bedrijfsnaam'" />
                 <input type="email" class="input" placeholder="Email" id="email" name="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'" />
                 <input type="password" class="input" placeholder="Wachtwoord" id="password" name="password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Wachtwoord'" />
-                <input type="password" class="input" placeholder="Herhaal wachtwoord" id="password" name="password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Herhaal wachtwoord'" />
-
-                <input type="text" class="input" placeholder="Studie" id="field_of_study" name="field_of_study" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Studie'" />
-                <input type="date" id="birth_date" name="birth_date" placeholder="Geboortedatum dd/mm/yyyy"/>
+                <input type="password" class="input" placeholder="Herhaal wachtwoord" id="password2" name="password2" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Herhaal wachtwoord'" />
                 <input type="tel" class="input" placeholder="Telefoon" id="phone" name="phone" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Telefoon'" />
             </section>
 
@@ -69,8 +54,8 @@
                     <h1>Locatie</h1>
                 </header>
                 <input type="text" class="input" placeholder="Adres" id="street" name="street" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Adres'" />
-                <input type="number" pattern="\d*" class="input" placeholder="huisnummer" name="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'huisnummer'" />
-                <input type="number" pattern="\d*" class="input" placeholder="Postcode" name="zip_code" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Postcode'" />
+                <input type="number" pattern="\d*" class="input" placeholder="huisnummer" name="number" id="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'huisnummer'" />
+                <input type="number" pattern="\d*" class="input" placeholder="Postcode" name="zip_code" id="zip_code" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Postcode'" />
                 <input type="text" class="input" placeholder="Stad" id="town" name="town" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Stad'" />
                 <div class="styled-select">
                     <select name="country" id="country">
@@ -332,13 +317,9 @@
                 <header class="other_info">
                     <h1>Andere info</h1>
                 </header>
-                <input type="number" pattern="\d*" class="input" placeholder="Rijksregisternummer" id="reg_number" name="reg_number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Rijksregisternummer'" />
-                <textarea id="about" name="about" placeholder="Over mezelf" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Over mezelf'"></textarea>
+                <input type="text" class="input" placeholder="BTW Nummer" id="vat_number" name="vat_number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'BTW Nummer'" />
+                <textarea id="description" name="description" placeholder="Over ons" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Over ons'"></textarea>
             </section>
-            <div class="cv">
-                <input type="file" name="cv" id="cv" accept=".pdf" placeholder="Upload CV (PDF)">
-                <p>Upload CV &lpar;PDF&rpar;</p>
-            </div>
             <input type="submit" class="submit" value="Submit" />
         </form>
     </article>
