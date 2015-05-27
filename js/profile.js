@@ -1,9 +1,10 @@
+
+var loggedIn = JSON.parse(localStorage.getItem("loggedIn"));
+
+if(loggedIn){
+
 var user = JSON.parse(localStorage.getItem("user"));
-
-console.log($(user).length);
-
-if($(user).length > 0){
-
+    
 $(function  () {
 
 
@@ -61,7 +62,7 @@ $(function  () {
                 
                 $(".settings.logout").on('click',function  () {
                     localStorage.clear();
-                    location.reload(); 
+                    window.location.replace("login.html");
             	});
             });
 
