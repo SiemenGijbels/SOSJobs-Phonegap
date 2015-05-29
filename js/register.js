@@ -40,6 +40,7 @@ $(function () {
         $("#register_student").submit(function(e) {
 
             e.preventDefault();
+            $(".preloader").removeClass("hide");
 
             var postData = $(this).serializeArray();
             var formURL = $(this).attr("action");
@@ -59,7 +60,7 @@ $(function () {
                     $.each(achievements,function (key,val) {
 
                         var sendInfo = {
-                           achievement_id: key,
+                           achievement_id: id,
                            student_id: data.id,
                            max: val
                        };
@@ -77,22 +78,27 @@ $(function () {
                             },
                             error: function(jqXHR, textStatus, errorThrown) 
                             {
-                                console.log(textStatus);  
+                                console.log(textStatus);
+
+                                $(".preloader").addClass("hide"); 
                             }
                         });
 
                     });
+
+                    $(".preloader").addClass("hide");
                     
                 },
                 error: function(jqXHR, textStatus, errorThrown) 
                 {
                     console.log(textStatus);  
+
+
+                    
                 }
                 
             });
             
-            localStorage.setItem('loggedIn',true);
-            window.location.replace("index.html");
             
         });
 
